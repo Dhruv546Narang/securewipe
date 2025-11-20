@@ -57,3 +57,12 @@
 2. **Install Dependencies**
 ```bash
 pip install -r requirements.txt
+
+---
+
+## 🚀 Usage
+
+### Method 1: The GUI (Recommended)
+Launch the modern one-click interface:
+```bash
+python src/ui_oneclick_improved.py
