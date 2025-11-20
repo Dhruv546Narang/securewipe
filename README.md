@@ -60,7 +60,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🚀 Usage
+🚀 Usage
 
 ### Method 1: The GUI (Recommended)
 Launch the modern one-click interface:
