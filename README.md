@@ -55,8 +55,8 @@
    cd securewipe
 
 2. **Install Dependencies**
-```bash
-pip install -r requirements.txt
+    ```bash
+    pip install -r requirements.txt
 
 ---
 
@@ -64,5 +64,34 @@ pip install -r requirements.txt
 
 ### Method 1: The GUI (Recommended)
 Launch the modern one-click interface:
-```bash
-python src/ui_oneclick_improved.py
+    ```bash
+    python src/ui_oneclick_improved.py
+
+Method 2: Script Integration
+You can import the wiper module into your own Python automation scripts:
+
+Python
+
+from src.secure_wipe import secure_wipe
+
+# Wipe a specific file with 3 passes (DoD standard)
+secure_wipe("sensitive_data.txt", passes=3)
+
+📂 Project Structure
+Plaintext
+
+securewipe/
+├── assets/                  # Images (logo.png, screenshot.png)
+├── Certificates/            # Generated proof-of-wipe PDFs go here
+├── src/                     # Source Code
+│   ├── secure_wipe.py       # Core wiping logic (Multi-pass overwrite)
+│   ├── cert_utils.py        # PDF & QR Code generation engine
+│   ├── generate_key.py      # RSA Key generation utility
+│   └── ui_oneclick_improved.py  # Main GUI entry point
+├── requirements.txt         # Python dependencies
+└── README.md                # Documentation
+
+⚠️ Security Disclaimer
+Note: While SecureWipe implements standard overwriting techniques, absolute data destruction on Modern SSDs and Journaling File Systems (like NTFS, APFS, or ext4) cannot be guaranteed by software alone due to hardware-level wear-leveling and block reallocation.
+
+For critical hardware decommissioning, physical destruction of the drive is the only 100% guaranteed method.
