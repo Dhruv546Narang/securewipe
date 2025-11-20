@@ -1,105 +1,57 @@
-📄 SecureWipe – File Erasure & Certificate Generator
+<div align="center">
 
-SecureWipe is a Python-based utility designed to securely erase files through multi-pass overwriting and generate digital proof-of-wipe certificates.
-It includes a simple one-click GUI, SHA-256 hashing, QR-code embedding, and PDF generation — all neatly bundled in an accessible interface.
+  <img src="assets/logo.png" alt="SecureWipe Logo" width="200" height="auto" />
+  
+  # SecureWipe
+  
+  **Professional Grade File Erasure & Certification Tool**
+  
+  A Python utility that performs **multi-pass secure overwriting** of files and generates <br />
+  cryptographically verifiable **PDF Certificates** as proof of destruction.
 
-🚀 Features
+  <p>
+    <a href="https://www.python.org/">
+      <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+    </a>
+    <a href="#">
+      <img src="https://img.shields.io/badge/GUI-Tkinter-blue?style=for-the-badge&logo=python&logoColor=white" />
+    </a>
+    <a href="#">
+      <img src="https://img.shields.io/badge/Security-Cryptography-red?style=for-the-badge&logo=security&logoColor=white" />
+    </a>
+    <a href="#">
+      <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" />
+    </a>
+  </p>
 
-🔐 Secure Multi-Pass File Wipe
+</div>
 
-🧾 PDF Certificate Generation
+---
 
-📡 QR Code Embedded Metadata
+## ⚡ Features
 
-🖥️ One-Click Tkinter GUI
+- **🗑️ DoD-Style Wiping:** Performs multi-pass overwriting to ensure data is unrecoverable by forensics tools.
+- **📜 Proof of Deletion:** Automatically generates a **PDF Certificate** containing the file's SHA-256 hash and timestamp.
+- **📱 QR Code Verification:** Embeds a QR code in the certificate for instant digital verification.
+- **🖱️ One-Click Interface:** Simple, clean GUI built with Tkinter — no command line knowledge required.
+- **🔐 RSA Signed:** Includes utilities to generate RSA keys for digitally signing the deletion logs.
 
-🔑 RSA Key Generator (optional)
+---
 
-📂 Clean Project Structure
+## 📸 Screenshots
 
-🧰 Tech Stack
+<div align="center"> 
+  <img src="https://via.placeholder.com/800x400?text=Add+Screenshot+Here" alt="SecureWipe GUI" />
+</div>
 
-Python 3
+---
 
-Tkinter (GUI)
+## 🛠️ Installation
 
-Pillow (Image handling)
+### Prerequisites
+Ensure you have **Python 3.8+** installed.
 
-Cryptography (Key generation)
-
-FPDF (Certificate PDF)
-
-qrcode (QR code generator)
-
-📁 Project Structure
-SecureWipe/
-│
-├── src/
-│   ├── secure_wipe.py
-│   ├── cert_utils.py
-│   ├── generate_key.py
-│   └── ui_oneclick_improved.py
-│
-├── assets/
-│   └── logo.png
-│
-├── Certificates/      # auto-generated after wiping
-│   └── ...
-│
-├── requirements.txt
-└── README.md
-
-🖼️ Screenshots
-
-(Add your GUI screenshots here)
-Example:
-
-
-⚙️ Setup & Installation
-1️⃣ Clone the Repository
-git clone https://github.com/YOUR-USERNAME/SecureWipe.git
-cd SecureWipe
-
-2️⃣ Install Requirements
-pip install -r requirements.txt
-
-🧪 Usage Guide
-▶ Run the GUI
-python src/ui_oneclick_improved.py
-
-▶ Programmatic Wipe
-from secure_wipe import secure_wipe
-secure_wipe("file.txt", passes=3)
-
-▶ Generate RSA Keys
-python src/generate_key.py
-
-⚠️ Security Disclaimer
-
-SecureWipe attempts multi-pass overwriting but cannot guarantee absolute deletion on:
-
-SSDs
-
-Journaling or copy-on-write filesystems
-
-Cloud-synced locations
-
-Devices with snapshots/backups
-
-Use responsibly.
-
-🤝 Contributing
-
-Contributions are welcome!
-Feel free to fork this repo and submit a pull request.
-
-📜 License
-
-This project is licensed under the MIT License.
-You can change it if needed.
-
-📬 Contact
-
-If you have questions or need help integrating SecureWipe:
-Dhruv Narang
-Email: dhruv546narang.com
+### 1. Clone the Repository
+```bash
+git clone [https://github.com/Dhruv546Narang/securewipe.git](https://github.com/Dhruv546Narang/securewipe.git)
+cd securewipe
