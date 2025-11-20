@@ -38,9 +38,54 @@
 
 ---
 
+---
+
 ## 🛠️ Installation
 
 ### 1. Clone the repository
 ```bash
 git clone https://github.com/Dhruv546Narang/securewipe.git
 cd securewipe
+
+### 2. Install dependencies
+```bash
+pip install -r requirements.txt
+
+
+## 🚀 Usage
+
+### Method 1 — GUI (Recommended)
+```bash
+python src/ui_oneclick_improved.py
+```
+
+### Method 2 — Script Integration
+```python
+from src.secure_wipe import secure_wipe
+secure_wipe("sensitive_data.txt", passes=3)
+```
+
+## 📂 Project Structure
+```bash
+securewipe/
+├── assets/               # Logo and images
+├── Certificates/         # Auto-generated certificates
+├── src/
+│   ├── secure_wipe.py    # Secure wipe engine
+│   ├── cert_utils.py     # QR + PDF generator
+│   ├── generate_key.py   # RSA key tool
+│   └── ui_oneclick_improved.py  # GUI
+├── requirements.txt
+└── README.md
+```
+
+## ⚠️ Security Disclaimer
+
+While SecureWipe implements standard overwriting methods, **perfect data destruction is not always guaranteed** on:
+
+- SSDs / NVMe
+- Journaling filesystems (NTFS, APFS, ext4, etc.)
+- Cloud-synced folders
+- Drives with snapshots / backups
+
+For critical erasure: **physical destruction is the only 100% secure method.**
