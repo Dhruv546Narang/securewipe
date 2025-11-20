@@ -46,11 +46,12 @@
 ```bash
 git clone https://github.com/Dhruv546Narang/securewipe.git
 cd securewipe
+```
 
 ### 2. Install dependencies
 ```bash
 pip install -r requirements.txt
-
+```
 
 ## 🚀 Usage
 
