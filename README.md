@@ -27,71 +27,20 @@
 
 ---
 
-## 📸 Interface
-
-<div align="center">
-  <img src="assets/screenshot.png" alt="GUI Screenshot" width="700" 
-       onerror="this.src='https://via.placeholder.com/700x400?text=Upload+screenshot.png+to+assets+folder+to+see+image'" />
-</div>
-
----
-
 ## ⚡ Features
 
 | Feature | Description |
 | :--- | :--- |
-| **🗑️ Secure Wipe** | DoD-standard multi-pass overwriting prevents forensic recovery. |
+| **🗑️ Secure Wipe** | Multi-pass overwriting prevents forensic recovery. |
 | **📜 Certificate** | Generates a PDF receipt with SHA-256 hash and timestamp. |
-| **📱 QR Verification** | Embeds a QR code in the PDF for instant digital validation. |
-| **🖱️ One-Click UI** | Clean, modern Tkinter interface requiring no technical skills. |
+| **📱 QR Verification** | QR code included in PDF for instant authenticity check. |
+| **🖱️ One-Click UI** | Clean Tkinter interface for non-technical users. |
 
 ---
 
 ## 🛠️ Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone [https://github.com/Dhruv546Narang/securewipe.git](https://github.com/Dhruv546Narang/securewipe.git)
-   cd securewipe
-
-2. **Install Dependencies**
-    ```bash
-    pip install -r requirements.txt
-
----
-
-🚀 Usage
-
-### Method 1: The GUI (Recommended)
-Launch the modern one-click interface:
-    ```bash
-    python src/ui_oneclick_improved.py
-
-Method 2: Script Integration
-You can import the wiper module into your own Python automation scripts:
-
-Python
-
-from src.secure_wipe import secure_wipe
-
-# Wipe a specific file with 3 passes (DoD standard)
-secure_wipe("sensitive_data.txt", passes=3)
-
-📂 Project Structure
-Plaintext
-
-securewipe/
-├── assets/                  # Images (logo.png, screenshot.png)
-├── Certificates/            # Generated proof-of-wipe PDFs go here
-├── src/                     # Source Code
-│   ├── secure_wipe.py       # Core wiping logic (Multi-pass overwrite)
-│   ├── cert_utils.py        # PDF & QR Code generation engine
-│   ├── generate_key.py      # RSA Key generation utility
-│   └── ui_oneclick_improved.py  # Main GUI entry point
-├── requirements.txt         # Python dependencies
-└── README.md                # Documentation
-
-⚠️ Security Disclaimer
-Note: While SecureWipe implements standard overwriting techniques, absolute data destruction on Modern SSDs and Journaling File Systems (like NTFS, APFS, or ext4) cannot be guaranteed by software alone due to hardware-level wear-leveling and block reallocation.
-
-For critical hardware decommissioning, physical destruction of the drive is the only 100% guaranteed method.
+### 1. Clone the repository
+```bash
+git clone https://github.com/Dhruv546Narang/securewipe.git
+cd securewipe
